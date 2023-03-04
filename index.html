@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Lab 04</title>
+</head>
+
+<body>
+    <!-- <div class="left"></div> -->
+    <div class="calc_wrapper">
+        <div class="calculator">
+            <div class="status-bar">
+                <div class="clock">
+                    <p id="time"></p>
+                </div>
+                <div class="mode">
+                    <p>Normal</p>
+                </div>
+            </div>
+            <div class="display">
+                <div class="display-main">
+                    <pre id="inp"></pre>
+                    <!-- <hr style="color: rgba(240, 248, 255, 0.186); width: 100%;"> -->
+                    <pre id="result">0</pre>
+                </div>
+            </div>
+            <div class="keys">
+                <table class="table-key">
+                    <tr>
+                        <td><button class="orange" onclick="pressAllClear()">AC</button></td>
+                        <td><button class="orange" onclick="backsp()"><i class="fas fa-backspace"></i></button></td>
+                        <td><button class="orange" onclick="operator(this)">%</button></td>
+                        <td><button class="orange" onclick="operator(this)">&div;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="insert(this)">7</button></td>
+                        <td><button onclick="insert(this)">8</button></td>
+                        <td><button onclick="insert(this)">9</button></td>
+                        <td><button class="orange" onclick="operator(this)">&times;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="insert(this)">4</button></td>
+                        <td><button onclick="insert(this)">5</button></td>
+                        <td><button onclick="insert(this)">6</button></td>
+                        <td><button class="orange" onclick="operator(this)">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="insert(this)">1</button></td>
+                        <td><button onclick="insert(this)">2</button></td>
+                        <td><button onclick="insert(this)">3</button></td>
+                        <td rowspan="2"><button class="orange" style="height: 150px;" onclick="equal()">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="insert(this)">0</button></td>
+                        <td><button onclick="dot()">.</button></td>
+                        <td><button class="orange" id="addition" onclick="operator(this)">+</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="right"></div> -->
+    <script src="js/script.js"></script>
+</body>
+</html>
